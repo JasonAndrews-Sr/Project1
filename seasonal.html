@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>Seasonal| Bethany's Pie Shop</title>
+   
+</head>
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </header>
+        <h1 style="color: #a593c2;text-align: center;padding:15px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;Seasonal Pies</h1>
+        <div style="width:1000px;margin-left: auto;margin-right: auto;">
+            <aside id="left-menu">
+                <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <header>
+                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
+                </header>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="pies.html">Fruit pies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+            </aside>
+        </div>
+    <main>
+        
+        <article>
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="images/pie-pumpkin.jpg" alt="Pumpkin Pie" />
+                    <div class="columns">
+                        <div class="title">Pumpkin Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">There is just something about pie that's pumpkin!</p>
+                    <button data-order="pie-pumpkin">Order</button>
+                </div>
+           
+                <div class="pie">
+                    <img src="images/pie-strawberry.jpg" alt="Strawberry Pie" />
+                    <div class="columns">
+                        <div class="title">Strawberry&nbsp;Pie</div>
+                        <div class="price">$19.95</div>
+                    </div>
+                        
+                    <p class="desc">I hope you buy this, I can't keep buying new pants.
+                    <button data-order="pie-strawberry">Order</button>
+                </div>
+
+                
+                <div class="pie">
+                    <img src="images/pie-christmas.jpg" alt="Christmas Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Christmas Apple Pie</div>
+                        <div class="price">$18.95</div>
+                    </div>
+                        
+                    <p class="desc">A holiday must have!</p>
+                    <button data-order="pie-christmas">Order</button>
+            </section>
+
+            <h1 style="color: #a593c2; text-align: center; padding:15px;">Seasonal Cakes</h1>
+            <section class="columns-desktop">
+                <div class="cake">
+                    <img src="images/cake-strawberry.jpg" alt="Strawberry Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Strawberry Cheesecake</div>
+                        <div class="price">$40.95</div>
+                    </div>
+                        
+                    <p class="desc">Don't cut this cake short.</p>
+                    <button data-order="cake-strawberry">Order</button>
+                </div>
+                        
+                  
+
+                <div class="cake">
+                    <img src="images/cake-mango.jpg" alt="Mango Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Mango Cheesecake</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                    <p class="desc">Tantilize your tastebuds and satisfy your craving.</p>
+                    <button data-order="cake-mango">Order</button>
+                </div>
+
+                <div class="cake">
+                    <img src="images/cake-orange.jpg" alt="Orange Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Orange Cheesecake</div>
+                        <div class="price">$42.95</div>
+                    </div>
+                    <p class="desc">Vitamin C always makes me feel better.</p>
+                    <button data-order="cake-orange">Order</button>
+                </div>
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <nav style="justify-content:space-around; align-items:normal ;" >
+            <ul>
+                <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </footer>
+</body>
+<script>
+    /*Looks for page to completely load*/
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        /*Searches for data-order class on a buttons*/
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+        /*Checks each button to see if it has been clicked */
+        orderButtons.forEach(function(button)
+        {
+            /* Has program search for button clicks*/
+            button.addEventListener("click", function(e)
+            {   
+                /*Detects button press and sets as current target*/
+                const button = e.currentTarget;
+                /*sets div container as the parent node of the button */
+                const container = button.parentNode;
+                
+                /*sets information for order based on button pressed*/
+                const order = 
+                {
+                    /*returns information from button pressed*/
+                    id: (id = button.getAttribute("data-order")),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+            /*takes ordered item and stores information as a sting*/
+            localStorage.setItem("order", JSON.stringify(order));
+            
+            /* sets const var url to location and replaces seasonal.html with order.html*/            
+            const url = window.location.href.replace("seasonal.html", "order.html");
+           
+            /*Sets window location to order.html*/
+            window.location.href = url;
+        
+            });
+        })
+    })
+</script>
+</html>

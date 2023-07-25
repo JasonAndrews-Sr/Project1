@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>Cakes| Bethany's Pie Shop</title>
+   
+</head>
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 style="color: #a593c2; text-align: center; padding:15px;">Cheesecake</h1>
+        <div style="width:1000px;margin-left: auto;margin-right: auto;">
+            <aside id="left-menu">
+                <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <header>
+                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
+                </header>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pies.html">Pies</a></li>
+                        <li><a href="seasonal.html">Seasonal pies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+            </aside>
+        </div>
+    <main>
+        
+        <article>
+            <section class="columns-desktop">
+                <div class="cake">
+                    <img src="images/cake-blueberry.jpg" alt="Blueberry Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Blueberry Cheesecake</div>
+                        <div class="price">$40.95</div>
+                    </div>
+                        
+                    <p class="desc">You have not experienced bliss just yet....</p>
+                    <button data-order="cake-blueberry">Order</button>
+                </div>
+           
+                <div class="cake">
+                    <img src="images/cake-vegan.jpg" alt="NYC Vegan Cheesecake" />
+                    <div class="columns">
+                        <div class="title">NYC Vegan Cheesecake</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                    <p class="desc">All the goodness and less guilt.</p>
+                    <button data-order="cake-vegan">Order</button>
+                </div>
+
+                <div class="cake">
+                    <img src="images/cake-NYC.jpg" alt="New York Cheesecake" />
+                    <div class="columns">
+                        <div class="title">New York Cheesecake</div>
+                        <div class="price">$39.95</div>
+                    </div>
+                        
+                    <p class="desc">Simplicity at a exquisite level</p>
+                    <button data-order="cake-NYC">Order</button>
+                </div>
+            </section>
+
+            <section class="columns-desktop">
+                <div class="cake">
+                    <img src="images/cake-german.jpg" alt="German Cheesecake" />
+                    <div class="columns">
+                        <div class="title">German Cheesecake</div>
+                        <div class="price">$42.95</div>
+                    </div>
+                        
+                    <p class="desc">German excellence in the sweetest of packages.</p>
+                    <button data-order="cake-german">Order</button>
+                </div>
+
+                <div class="cake">
+                    <img src="images/cake-oreo.jpg" alt="Oreo Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Oreo Cheesecake</div>
+                        <div class="price">$39.95</div>
+                    </div>
+                        
+                    <p class="desc">Its oreo......do I relly need to say more?</p>
+                    <button data-order="cake-oreo">Order</button>
+                </div>       
+
+                <div class="cake">
+                    <img src="images/cake-turtle.jpg" alt="Turtle Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Turtle Cheesecake</div>
+                        <div class="price">$42.95</div>
+                    </div>
+                        
+                    <p class="desc">This turtle moves fast! Don't miss it by a hare.</p>
+                    <button data-order="cake-turtle">Order</button>
+                </div>
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <nav style="justify-content:space-around; align-items:normal ;" >
+            <ul>
+            <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="seasonal.html">Seasonal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </footer>
+</body>
+<script>
+    /*Looks for page to completely load*/
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        /*Searches for data-order class on a buttons*/
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+        /*Checks each button to see if it has been clicked */
+        orderButtons.forEach(function(button)
+        {
+            /* Has program search for button clicks*/
+            button.addEventListener("click", function(e)
+            {   
+                /*Detects button press and sets as current target*/
+                const button = e.currentTarget;
+                /*sets div container as the parent node of the button */
+                const container = button.parentNode;
+                
+                /*sets information for order based on button pressed*/
+                const order = 
+                {
+                    /*returns information from button pressed*/
+                    id: (id = button.getAttribute("data-order")),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+            /*takes ordered item and stores information as a sting*/
+            localStorage.setItem("order", JSON.stringify(order));
+            
+            /* sets const var url to location and replaces cakes.html with order.html*/            
+            const url = window.location.href.replace("cakes.html", "order.html");
+           
+            /*Sets window location to order.html*/
+            window.location.href = url;
+        
+            });
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,227 @@
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #999;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #e6e4d9;
+    background-image: url('./images/background.png');
+}
+
+p 
+{
+    margin: 0.5em 0 0.5em 0;
+}
+
+#mainheader
+{
+    background-color: #a593c2;
+}
+
+button:visited
+{
+    color: #23CFA7;
+}
+button:link
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #23CFA7;
+}
+a:link
+{
+    color: #040404;
+    text-decoration: none;
+}
+
+a, button, tr:hover
+{
+    color:#0a9e7c;
+    font-size-adjust: 150%;
+    font-weight: bold;
+}
+section
+{
+    flex: 1;
+}
+nav 
+{
+    height: 60px;
+    width: 1000px;
+    margin: 0 auto 20px;
+}
+
+
+
+
+nav > ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+nav > ul > li
+{
+    float: left;
+}
+
+nav>ul>li a
+{
+    display: flex;
+    color: #a593c2;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav>ul>li a:visited
+{
+    color: #fff;
+}
+
+
+h1
+{
+    color:#23CFA7
+}
+main 
+{
+    
+    background-image: url("images/background.png");
+    margin-top: 20px;
+    width: 58%;
+}
+
+footer
+{
+    clear: both;
+    width: 100%;
+    
+}
+footer > nav >ul > li > a:visited
+{
+  color:#23CFA7;
+}
+
+#left-menu
+{
+    float: left;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+aside
+{
+    text-align: left;   
+}
+
+.columns
+{
+    display:flex;
+    
+}
+
+.columns > div
+{
+    flex: 1;
+}
+.columns-desktop
+{
+    flex: 1;
+}
+
+
+table
+{
+    text-align: center;
+    vertical-align: middle;
+    table-layout: fixed;
+    display:inline-flexbox;
+    justify-content: space-around;
+    width: 200px;
+
+}
+
+table, th, td, tr
+{ 
+    flex: 1;
+    padding: 5px;
+
+}
+td
+{
+    background-color:#a593c2;
+}
+
+
+
+
+@media only screen and (min-width: 768px)
+{
+    main 
+    {
+        display: flex;
+    }
+    aside
+    {
+        margin-left: 2%;
+    }
+    .columns-desktop
+    {
+        display: flex;
+    }
+
+}
+/* Pies and cakes*/
+
+.pie, .cake
+{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    justify-content: space-around;
+}
+
+.pie img, .cake img
+{
+    width: 100%;
+    height: 50%;
+}
+
+.pie .title, .cake .title
+{
+    font-weight: bold;
+}
+
+.pie .columns, .cake .columns
+{
+    width: 100%;
+}
+
+.pie .price, .cake .price
+{
+    text-align: center;
+}
+.pie .columns div, .cake .columns div
+{
+    width: 50%;
+}
+
+.pie button, .cake button
+{
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 3px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+}

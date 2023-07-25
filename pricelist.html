@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>PriceList| Bethany's Pie Shop</title>
+   
+</head>
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+               
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </header>
+        <h1 style="color: #a593c2; text-align: center; padding:15px;">PriceList</h1>
+    
+        <div style="margin-left: auto;margin-right: auto;">
+            <aside id="left-menu">
+                <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop"></a>
+                <header>
+                    <h3 style="color: #23CFA7;">Browse Our Pies</h3>
+                </header>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="pies.html">Fruit pies</a></li>
+                        <li><a href="seasonal.html">Seasonal pies</a></li>
+                    </ul>
+            </aside>
+    <div style="width:1000px;margin-left: auto;margin-right: auto;">
+        <main>
+            <table border="1" style="justify-self:flex-start ;border:  1px solid black;">
+                
+                 
+                <thead style="background-color:#a593c2; position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;">
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Order</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <th colspan="5" style="border:none;">Pies</th>
+                </tr>
+                
+                <tbody>   
+                   
+                    <tr class="pie">
+                        <td><img src="images/pie-cherry.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Cherry Pie</td>
+                        <td class="desc">A summer classic!</td>
+                        <td class="price">$15.95</td>
+                        <td><button data-order="pie-cherry">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-apple.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Apple Pie</td>
+                        <td class="desc">Our famous apple pie</td>
+                        <td class="price">$12.95</td>
+                        <td><button data-order="pie-apple">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-pecan.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Pecan Pie</td>
+                        <td class="desc">My personal trainer's nightmare</td>
+                        <td class="price">$18.95</td>
+                        <td><button data-order="pie-pecan">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-peach.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Peach Pie</td>
+                        <td class="desc">Until it melts in your mouth, life is incomplete!</td>
+                        <td class="price">$18.95</td>
+                        <td><button data-order="pie-peach">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-cranberry.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Cranberry Pie</td>
+                        <td class="desc">So smooth, you beg for a bite</td>
+                        <td class="price">$16.95</td>
+                        <td><button data-order="pie-cranberry">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-rhubarb.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Rhubarb Pie</td>
+                        <td class="desc">There is pie, <em>then there is pie...</em></td>
+                        <td class="price">$15.95</td>
+                        <td><button data-order="pie-rhubarb">Order</button></td>
+                    </tr>
+         
+                    <tr>
+                    <th colspan="5" style="border:none;">Seasonal Pies</th>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-pumpkin.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Pumpkin Pie</td>
+                        <td class="desc">There is just something about pie that's pumpkin!</td>
+                        <td class="price">$15.95</td>
+                        <td><button data-order="pie-pumpkin">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-strawberry.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Strawberry Pie</td>
+                        <td class="desc">I hope you buy this, I can't keep buying new pants.</td>
+                        <td class="price">$19.95</td>
+                        <td><button data-order="pie-strawberry">Order</button></td>
+                    </tr>
+                    <tr class="pie">
+                        <td><img src="images/pie-christmas.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Christmas Apple Pie</td>
+                        <td class="desc">A holiday must have!</td>
+                        <td class="price">$18.95</td>
+                        <td><button data-order="pie-cherry">Order</button></td>
+                    </tr>
+
+                    <tr>
+                    <th colspan="5" style="border:none;">Cheescakes</th>
+                    </tr>
+
+                    <tr class="cake">
+                        <td><img src="images/cake-blueberry.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Blueberry Cheesecake</td>
+                        <td class="desc">You have not experienced bliss just yet....</td>
+                        <td class="price">$40.95</td>
+                        <td><button data-order="cake-blueberry">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-vegan.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">NYC Vegan Cheesecake</td>
+                        <td class="desc">All the goodness and less guilt.</td>
+                        <td class="price">$44.95</td>
+                        <td><button data-order="cake-vegan">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-NYC.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">New York Cheesecake</td>
+                        <td class="desc">Simplicity at a exquisite level</td>
+                        <td class="price">$39.95</td>
+                        <td><button data-order="cake-NYC">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-german.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">German Chocolate Cheesecake</td>
+                        <td class="desc">German excellence in the sweetest of packages.</td>
+                        <td class="price">$42.95</td>
+                        <td><button data-order="cake-german">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-oreo.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Oreo Cheesecake</td>
+                        <td class="desc">Its oreo......do I relly need to say more?</td>
+                        <td class="price">$39.95</td>
+                        <td><button data-order="cake-oreo">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-turtle.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Turtle Cheesecake</td>
+                        <td class="desc">This turtle moves fast! Don't miss it by a hare.</td>
+                        <td class="price">$42.95</td>
+                        <td><button data-order="cake-turtle">Order</button></td>
+                    </tr>
+                    <tr>
+                    <th colspan="5" style="border:none;"> Seasonal Cheescakes</th>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-strawberry.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Strawberry Pie</td>
+                        <td class="desc">Don't cut this cake short.</td>
+                        <td class="price">$40.95</td>
+                        <td><button data-order="cake-strawberry">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-mango.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Mango Cheesecake</td>
+                        <td class="desc">Tantilize your tastebuds and satisfy your craving.</td>
+                        <td class="price">$44.95</td>
+                        <td><button data-order="cake-mango">Order</button></td>
+                    </tr>
+                    <tr class="cake">
+                        <td><img src="images/cake-orange.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                        <td class="title">Orange Cheesecake</td>
+                        <td class="desc">Vitamin C always makes me feel better.</td>
+                        <td class="price">$42.95</td>
+                        <td><button data-order="cake-orange">Order</button></td>
+                    </tr>
+                    
+                </tbody>  
+        
+       
+            </table>
+        </main> 
+    </div>   
+    <footer>
+        <nav style="justify-content:space-around; align-items:normal ;" >
+            <ul>
+            <li><a style="padding: 0;" href="index.html"></index> <img src="./images/pie.png" height="55"></a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="seasonal.html">Seasonal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </footer>
+</body>
+<script>
+    /*Looks for page to completely load*/
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        /*Searches for data-order class on a buttons*/
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+        /*Checks each button to see if it has been clicked */
+        orderButtons.forEach(function(button)
+        {
+            /* Has program search for button clicks*/
+            button.addEventListener("click", function(e)
+            {   
+                /*Detects button press and sets as current target*/
+                const button = e.currentTarget;
+                /*sets div container as the parent node of the button */
+                const container = button.parentNode;
+                
+                /*sets information for order based on button pressed*/
+                const order = 
+                {
+                    /*returns information from button pressed*/
+                    id: (id = button.getAttribute("data-order")),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+            /*takes ordered item and stores information as a sting*/
+            localStorage.setItem("order", JSON.stringify(order));
+            
+            /* sets const var url to location and replaces pricelist.html with order.html*/            
+            const url = window.location.href.replace("pricelist.html", "order.html");
+           
+            /*Sets window location to order.html*/
+            window.location.href = url;
+        
+            });
+        })
+    })
+</script>
+</html>

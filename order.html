@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" />
+    <style>
+        @media only screen and (min-width: 768px)
+        {
+            article
+            {
+                width: 350px;
+            }
+        }
+
+        .input-group
+        {
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select
+        {
+            padding: 10px;
+            border: solid 1px #999;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        label
+        {
+            font-weight: 600;
+        }
+
+        input[type="reset"]
+        {
+            background: transparent;
+            border: 0;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input[type="submit"]
+        {
+            border: solid 1px #999;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+    </style>
+    <title>Orders|Bethany's Pie Shop</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <nav>
+                <ul>
+                    <li><img src="./images/pie.png" height="55"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="pies.html">Pies</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <aside id="left-menu">
+            <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop"></a>
+            <header>
+                <h3 style="color: #23CFA7;">Browse Our Pies</h3>
+            </header>
+                <ul>
+                    
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="pies.html">Pies</a></li>
+                    <li><a href="seasonal.html">Seasonal pies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+        </aside>
+        <article>
+            <h1>Order</h1>
+            
+            <div class="pie">
+                <img src="" />
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
+                </div>
+                <p class="desc"></p>
+            </div>
+
+            <form action="http://localhost:7071/api/post" method="POST">
+                <input type="hidden" id="pie-order" name="pie-order">
+                <input type="hidden" id="location" name="location">
+                
+                <div class="input-group">
+                
+                    <div><label for="first-name">First Name</label></div>
+                    <div><input type="text" name="first-name" id="first-name" autocomplete=off /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="last-name">Last Name</label></div>
+                    <div><input type="text" name="last-name" id="last-name" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id="address" autocomplete=off /></div>
+                </div>
+                <div class="input-group">
+                    <div><label for="unit-number">Unit Number</label></div>
+                    <div><input type="text" name="unit-number" id="unit-number" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="city">City</label></div>
+                    <div><input type="text" name="city" id="city" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="state">State</label></div>
+                    <div>
+                        <select name="state" id="state">
+                            <option value="" selected>[Select One</option>
+                            <option value="Alabama">Alabama</option> 
+                            <option value="Alaska">Alaska</option> 
+                            <option value="Arizona">Arizona</option> 
+                            <option value="Arkansas">Arkansas</option> 
+                            <option value="California">California</option> 
+                            <option value="Colorado">Colorado</option> 
+                            <option value="Conneticut">Conneticut</option> 
+                            <option value="Deleware">Deleware</option>
+                            <option value="Florida">Florida</option> 
+                            <option value="Georgia">Georgia</option> 
+                            <option value="Hawaii">Hawaii</option> 
+                            <option value="Idaho">Idaho</option> 
+                            <option value="Illinois">Illinois</option> 
+                            <option value="Indiana">Indiana</option> 
+                            <option value="Iowa">Iowa</option> 
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option> 
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option> 
+                            <option value="New York">New York</option> 
+                            <option value="North Carolina">North Carolina</option> 
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option> 
+                            <option value="Oregan">Oregan</option> </option>
+                            <option value="Pennsylvania">Pennsylvania</option> 
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option> 
+                            <option value="Utah">Utah</option> 
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option> 
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                    <div><label for="postal-code">Postal Code</label></div>
+                    <div><input type="text" name="postal-code" id="postal-code" autocomplete=off /></div>
+                </div>
+                
+                <div class="input-group">
+                    <div><label for="comments">Comments</label></div>
+                    <div>
+                        <textarea 
+                            name="comments" 
+                            id="comments" 
+                            cols="30" 
+                            rows="10"
+                        ></textarea> 
+                    
+                    </div>
+                    
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Order" />
+
+                    </div>
+                </div>
+            
+            </div>
+
+            </form>
+        </article> 
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><img src="./images/pie.png" height="55"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        let locationBox = document.querySelector("#location");
+
+        let location = 
+        {
+            latitude: "unknown",
+            longitude: "unknown"
+        };
+        window.navigator.geolocation.getCurrentPosition
+        (
+            function(position)
+            {
+                location
+                {
+                    latitude: position.coords.latitude;
+                    longitude: position.coords.longitude
+                };
+                locationBox.value = JSON.stringify(location);
+            },
+            function(error)
+            {
+                locationBox.value = JSON.stringify(location);
+            }
+        );
+        
+        
+        const order = localStorage.getItem("order");
+
+        if(order)
+        { 
+            /* Turns pie string back into data*/
+            const pieOrder = JSON.parse(order);
+   
+          /*makes pie info a const*/
+            
+        
+            const pie = document.querySelector(".pie");
+            const title = pie.querySelector(".title");
+            const price = pie.querySelector(".price");
+            const desc = pie.querySelector(".desc");
+            const orderInput = document.querySelector("#pie-order");
+            
+       
+
+            /*enters pie info into new form pie-order*/
+            title.innerText = pieOrder.title;
+            price.innerText = pieOrder.price;
+            desc.innerText = pieOrder.desc;
+            
+
+
+            /*adds image of pie to order page*/
+            
+                  
+                    const img = pie.querySelector("img");
+                
+            
+                
+                img.setAttribute("src", `images/${pieOrder.id}.jpg`);
+                img.setAttribute("alt", pieOrder.title);
+        }
+
+        
+    });
+</script>
+</html>

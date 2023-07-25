@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>Pies| Bethany's Pie Shop</title>
+   
+</head>
+<body>
+    <header id=" mainheader">
+        <nav>
+            <ul>
+                <li><img src="./images/pie.png" height="55"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </header>
+        <h1 style="color: #a593c2; text-align: center; padding:15px;">Promotional Items</h1>
+        <div style="width:1000px;margin-left: auto;margin-right: auto;">
+            <aside id="left-menu">
+                <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <header>
+                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
+                </header>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="pies.html">Fruit pies</a></li>
+                        <li><a href="seasonal.html">Seasonal pies</a></li>
+                        </ul>
+            </aside>
+        </div>
+    <main>
+        
+        <article>
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="images/apple-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Apple Pie</div>
+                        <div class="price">$12.95</div>
+                    </div>
+                        
+                    <p class="desc">Our famous apple pie</p>
+                    <button data-order="apple-pie">Order</button>
+                </div>
+           
+                <div class="pie">
+                    <img src="images/cherry-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="images/cherry-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie">Order</button>
+                </div>
+            </section>
+
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="images/cherry-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="images/cherry-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="images/cherry-pie.png" alt="Apple Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$15.95</div>
+                    </div>
+                        
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie">Order</button>
+                </div>
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <nav style="justify-content:space-around; align-items:normal ;" >
+            <ul>
+                <li><img src="./images/pie.png" height="55"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="seasonal.html">Seasonal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </footer>
+</body>
+<script>
+    /*Looks for page to completely load*/
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        /*Searches for data-order class on a buttons*/
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+        /*Checks each button to see if it has been clicked */
+        orderButtons.forEach(function(button)
+        {
+            /* Has program search for button clicks*/
+            button.addEventListener("click", function(e)
+            {   
+                /*Detects button press and sets as current target*/
+                const button = e.currentTarget;
+                /*sets div container as the parent node of the button */
+                const container = button.parentNode;
+                
+                /*sets information for order based on button pressed*/
+                const order = 
+                {
+                    /*returns information from button pressed*/
+                    id: button.getAttribute("data-order"),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+            /*takes ordered item and stores information as a sting*/
+            localStorage.setItem("order", JSON.stringify(order));
+            
+            /* sets const var url to location and replaces pies.html with order.html*/            
+            const url = window.location.href.replace("pies.html", "order.html");
+           
+            /*Sets window location to order.html*/
+            window.location.href = url;
+        
+            });
+        })
+    })
+</script>
+</html>
