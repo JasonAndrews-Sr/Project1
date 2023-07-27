@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="/CSS/site.css" />
     <style>
         @media only screen and (min-width: 768px)
         {
@@ -53,31 +53,32 @@
 
 </head>
 <body>
-    <header>
+    <header id="mainheader">
         <nav>
             <nav>
                 <ul>
-                    <li><img src="./images/pie.png" height="55"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cakes.html">Cakes</a></li>
-                    <li><a href="pies.html">Pies</a></li>
-                    <li><a href="seasonal.html">Seasonal</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><img src="/images/CSS/logos/pie.png" height="55"></a></li>
+                    <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                    <li><a href="/pages/cakes.html">Cakes</a></li>
+                    <li><a href="/pages/pies.html">Pies</a></li>
+                    <li><a href="/pages/seasonal.html">Seasonal</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
     </header>
     <main>
-        <aside id="left-menu">
-            <a href="index.html"><img src="./images/logo.png" alt="Bethany's Pie Shop"></a>
+        <aside id="left-menu" style="position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;">
+            <a href="/pages/index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop"></a>
             <header>
                 <h3 style="color: #23CFA7;">Browse Our Pies</h3>
             </header>
                 <ul>
-                    
-                    <li><a href="cakes.html">Cakes</a></li>
-                    <li><a href="pies.html">Pies</a></li>
-                    <li><a href="seasonal.html">Seasonal pies</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                    <li><a href="/pages/cakes.html">Cakes</a></li>
+                    <li><a href="/pages/pies.html">Pies</a></li>
+                    <li><a href="/pages/seasonal.html">Seasonal pies</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                    <input type="search" placeholder="Search our site" /><button type="submit">Search</button>
                 </ul>
         </aside>
         <article>
@@ -209,12 +210,12 @@
     <footer>
         <nav>
             <ul>
-                <li><img src="./images/pie.png" height="55"></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cakes.html">Cakes</a></li>
-                <li><a href="pies.html">Pies</a></li>
-                <li><a href="seasonal.html">Seasonal</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><img src="/images/CSS/logos/pie.png" height="55"></a></li>
+                <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                <li><a href="/pages/cakes.html">Cakes</a></li>
+                <li><a href="/pages/pies.html">Pies</a></li>
+                <li><a href="/pages/seasonal.html">Seasonal</a></li>
+                <li><a href="/pages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </footer>
@@ -279,7 +280,7 @@
                 
             
                 
-                img.setAttribute("src", `images/${pieOrder.id}.jpg`);
+                img.setAttribute("src", `/images/products/${pieOrder.id}.jpg`);
                 img.setAttribute("alt", pieOrder.title);
         }
 

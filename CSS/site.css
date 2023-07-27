@@ -6,7 +6,7 @@ body
     margin-right: auto;
     margin-left: auto;
     background-color: #e6e4d9;
-    background-image: url('./images/background.png');
+    background-image: url('/images/CSS/background.png');
 }
 
 p 
@@ -35,7 +35,7 @@ a:visited
 }
 a:link
 {
-    color: #040404;
+    color: #d5df10;
     text-decoration: none;
 }
 
@@ -53,7 +53,11 @@ nav
 {
     height: 60px;
     width: 1000px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
+    font-size: 24px;
+    text-align: center;
+    justify-items: center;
+    align-content: space-around;
 }
 
 
@@ -94,15 +98,14 @@ h1
 }
 main 
 {
+    margin-top: 10px;
     
-    background-image: url("images/background.png");
-    margin-top: 20px;
-    width: 58%;
 }
 
 footer
 {
-    clear: both;
+    align-items: center;
+    
     width: 100%;
     
 }
@@ -114,8 +117,8 @@ footer > nav >ul > li > a:visited
 #left-menu
 {
     float: left;
-    width: 30%;
-    margin-bottom: 20px;
+    width: 20%;
+    margin-bottom: 10px;
 }
 
 aside
@@ -133,11 +136,11 @@ aside
 {
     flex: 1;
 }
+
 .columns-desktop
 {
     flex: 1;
 }
-
 
 table
 {
@@ -146,23 +149,18 @@ table
     table-layout: fixed;
     display:inline-flexbox;
     justify-content: space-around;
-    width: 200px;
-
+    width: 12;
 }
 
 table, th, td, tr
 { 
     flex: 1;
     padding: 5px;
-
 }
 td
 {
     background-color:#a593c2;
 }
-
-
-
 
 @media only screen and (min-width: 768px)
 {
@@ -185,10 +183,10 @@ td
 .pie, .cake
 {
     width: 200px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    border: solid 1px #ccc;
+    padding: 5px;
+    margin: 5px;
+    background-color:#23CFA7;
+    border: solid 3px #a97bf5;
     justify-content: space-around;
 }
 
@@ -214,7 +212,7 @@ td
 }
 .pie .columns div, .cake .columns div
 {
-    width: 50%;
+    width: 80%;
 }
 
 .pie button, .cake button
@@ -225,3 +223,24 @@ td
     border-radius: 3px;
     color: #fff;
 }
+article
+{
+    width: 60%;
+    padding-top: 0; 
+    padding-left: 5em; 
+    padding-bottom: 0; 
+    padding-right: 0;
+}
+.contact
+{
+    padding: 20px; 
+    text-align: center;
+    background-size: 100%;
+    font-size: 24px;
+    background-color:#a97bf5;
+    border: 4px ridge #23CFA7;
+    margin: 20px;
+    color:#057b5f;
+    
+}
+

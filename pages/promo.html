@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/site.css" type="text/css" />
+    <title>Pies| Bethany's Pie Shop</title>
+   
+</head>
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li ><a style="padding: 0;"href="/pages/index.html"><img src="/images/CSS/logos/pie.png"  height= "55"></a></li>
+                <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                <li><a href="/pages/cakes.html">Cakes</a></li>
+                <li><a href="/pages/pies.html">Pies</a></li>
+                <li><a href="/pages/seasonal.html">Seasonal</a></li>
+                <li><a href="/pages/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </header>
+        
+        <div style="width:1000px;margin-left: auto;margin-right: auto;">
+            <aside id="left-menu" style="position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;">
+                <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <header>
+                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
+                </header>
+                    <ul>
+                        <li><a href="/pages/index.html">Home</a></li>
+                        <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                        <li><a href="/pages/cakes.html">Cakes</a></li>
+                        <li><a href="/pages/pies.html">Fruit pies</a></li>
+                        <li><a href="/pages/seasonal.html">Seasonal pies</a></li>
+                        <input type="search" placeholder="Search our site" /><button type="submit">Search</button>    
+                    </ul>
+            </aside>
+        </div>
+    <main>
+        
+        <article>
+            <h1 style="color: #a593c2; text-align: center; padding:15px;">Promotional Items</h1>
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="/images/Products/cake-orange.jpg" alt="Orange Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Orange Cheesecake</div>
+                        <div class="price">$42.95</div>
+                    </div>
+                        
+                    <p class="desc">Vitamin C always makes me feel better.</p>
+                    <button data-order="cake-orange">Order</button>
+                </div>
+           
+                <div class="pie">
+                    <img src="/images/Products/cake-vegan.jpg" alt="NYC Vegan Cheesecake" />
+                    <div class="columns">
+                        <div class="title">NYC Vegan Cheesecake</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                        
+                    <p class="desc">All the goodness and less guilt.</p>
+                    <button data-order="cake-vegan">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="/images/Products/cake-turtle.jpg" alt="Turtle Cheesecake" />
+                    <div class="columns">
+                        <div class="title">Turtle Cheesecake</div>
+                        <div class="price">$42.95</div>
+                    </div>
+                        
+                    <p class="desc">This turtle moves fast! Don't miss it by a hare.</p>
+                    <button data-order="cake-turtle">Order</button>
+                </div>
+            </section>
+
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="/images/Products/cake-strawberry.jpg" alt="Strawberry Cheescake" />
+                    <div class="columns">
+                        <div class="title">Strawberry Cheescake</div>
+                        <div class="price">$40.95</div>
+                    </div>
+                        
+                    <p class="desc">Don't cut this cake short.</p>
+                    <button data-order="cake-strawberry">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="/images/Products/pie-christmas.jpg" alt="Christmas Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">$18.95</div>
+                    </div>
+                        
+                    <p class="desc">A holiday must have!</p>
+                    <button data-order="pie-christmas">Order</button>
+                </div>
+
+                <div class="pie">
+                    <img src="/images/Products/pie-strawberry.jpg" alt="Strawberry Pie" />
+                    <div class="columns">
+                        <div class="title">Strawberry Pie</div>
+                        <div class="price">$19.95</div>
+                    </div>
+                        
+                    <p class="desc">I hope you buy this, I can't keep buying new pants.</p>
+                    <button data-order="pie-strawberry">Order</button>
+                </div>
+            </section>
+            <footer style="text-align: center;">
+                <nav  >
+                    <ul>
+                        <li><img src="/images/CSS/logos/pie.png" height="55"></a></li>
+                        <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
+                        <li><a href="/pages/cakes.html">Cakes</a></li>
+                        <li><a href="/pages/pies.html">Pies</a></li>
+                        <li><a href="/pages/seasonal.html">Seasonal</a></li>
+                        <li><a href="/pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </article>
+    </main>
+    
+</body>
+<script>
+    /*Looks for page to completely load*/
+    window.addEventListener("DOMContentLoaded", function(e)
+    {
+        /*Searches for data-order class on a buttons*/
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+        /*Checks each button to see if it has been clicked */
+        orderButtons.forEach(function(button)
+        {
+            /* Has program search for button clicks*/
+            button.addEventListener("click", function(e)
+            {   
+                /*Detects button press and sets as current target*/
+                const button = e.currentTarget;
+                /*sets div container as the parent node of the button */
+                const container = button.parentNode;
+                
+                /*sets information for order based on button pressed*/
+                const order = 
+                {
+                    /*returns information from button pressed*/
+                    id: button.getAttribute("data-order"),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+            /*takes ordered item and stores information as a sting*/
+            localStorage.setItem("order", JSON.stringify(order));
+            
+            /* sets const var url to location and replaces pies.html with order.html*/            
+            const url = window.location.href.replace("pies.html", "order.html");
+           
+            /*Sets window location to order.html*/
+            window.location.href = url;
+        
+            });
+        })
+    })
+</script>
+</html>
