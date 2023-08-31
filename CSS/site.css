@@ -150,7 +150,7 @@ table
     vertical-align: middle;
     table-layout: fixed;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content:stretch
     
    
 }
@@ -159,6 +159,8 @@ tr {
     display:flex;
     flex: 5;
     align-items: center;
+    background-color:#23CFA7;
+    border: solid 3px #a97bf5;
 }
 
 table, th, td
@@ -167,6 +169,17 @@ table, th, td
     flex: 1;
     padding: 5px;
 }
+
+td {
+    
+    
+    border: 3px solid #a97bf5;
+    height: 100%;
+    width: 100%;
+
+}
+
+
 
 
 @media only screen and (min-width: 768px)
