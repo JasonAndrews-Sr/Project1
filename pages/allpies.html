@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/site.css" type="text/css" />
-    <title>PriceList| Bethany's Pie Shop</title>
+    <title>PriceList Bethany's Pie Shop</title>
  
     <style>
         @media only screen and (min-width: 768px)
@@ -59,7 +59,7 @@
                 <li><a style="padding: 0;" href="/pages/index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
                
                 <li><a href="/pages/cakes.html">Cakes</a></li>
-                <li><a href="/pages/pies.html">Pies</a></li>
+                <li><a href="/pages/pies.html">Fruit Pies</a></li>
                 <li><a href="/pages/seasonal.html">Seasonal</a></li>
                 <li><a href="/pages/contact.html">Contact Us</a></li>
             </ul>
@@ -76,7 +76,7 @@
                     <ul>
                         <li><a href="/pages/index.html">Home</a></li>
                         <li><a href="/pages/cakes.html">Cakes</a></li>
-                        <li><a href="/pages/pies.html">Fruit pies</a></li>
+                        <li><a href="/pages/pies.html">Fruit Pies</a></li>
                         <li><a href="/pages/seasonal.html">Seasonal pies</a></li>
                         <input type="search" placeholder="Search our site" name="search" />
                         <button type="submit">Search</button>
@@ -86,34 +86,32 @@
         
     <main>
             
-        <table border: 1 style=" flex-direction: column; border: 8px ridge #23CFA7;">
+        <table border: 1 style=" flex-direction: column; flex-basis: 100%; border: 8px ridge #23CFA7;">
                
-               <div>  
+            <div>  
                 <thead style="background-color:#a593c2; position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;">
-                    
-                    <tr>
-                        
-                        <th>Name</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Order</th>
+                    <tr>                        
+                        <th scope="col">Name</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Order</th>
                     </tr>
                 </thead>
             </div>
-                <tr>
-                    <th colspan="5" style="border:none;">Pies</th>
-                </tr>
+                    <tr>
+                        <th colspan="5" style="border:none;">Fruit Pies</th>
+                    </tr>
                 
-                <tbody class="pieTableBody">  
+                <tbody>  
                    
                     <tr class="pie product">
-                        <td class="title" id="cherry-pie">Cherry Pie</td>
-                        <td class="image" id="cherry-pie-image"><img src="/images/Products/pie-cherry.jpg" style="width:100%;" alt="Cherry Pie" /></td>
+                        <div><th  scope="row" class="title rtitle" id="cherry-pie">Cherry Pie</th></div>
+                        <td  scope="row" class="image" id="cherry-pie-image"><img src="/images/Products/pie-cherry.jpg" style="width:100%;" alt="Cherry Pie" /></td>
                         
-                        <td class="description">Sharing is caring, but then again, this is  oh so cherrrrry!!!</td>
-                        <td class="price">$15.95</td>
-                        <td><button data-order="pie-cherry">Order</button></td>
+                        <td  scope="row" class="description">Sharing is caring, but then again, this is  oh so cherrrrry!!!</td>
+                        <td  scope="row" class="price">$15.95</td>
+                        <td  scope="row"><button data-order="pie-cherry">Order</button></td>
                     </tr>
                     <tr class="pie product">
                         <td class="title">Apple Pie</td>
@@ -269,7 +267,7 @@
                     <ul>
                         <li><a style="padding: 0;" href="/pages/index.html"><img src="/images/CSS/logos/pie.png" height="55"></a></li>
                         <li><a href="/pages/cakes.html">Cakes</a></li>
-                        <li><a href="/pages/pies.html">Pies</a></li>
+                        <li><a href="/pages/pies.html">Fruit Pies</a></li>
                         <li><a href="/pages/seasonal.html">Seasonal</a></li>
                         <li><a href="/pages/contact.html">Contact Us</a></li>
                     </ul>

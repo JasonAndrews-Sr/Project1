@@ -150,7 +150,8 @@ table
     vertical-align: middle;
     table-layout: fixed;
     display: inline-flex;
-    justify-content:stretch
+    flex-basis: 100%;
+    width: 80%;
     
    
 }
@@ -158,46 +159,32 @@ table
 tr {
     display:flex;
     flex: 5;
-    align-items: center;
     background-color:#23CFA7;
     border: solid 3px #a97bf5;
+    align-items: stretch;
+    
 }
 
-table, th, td
+th
 { 
-    
-    flex: 1;
+   
     padding: 5px;
+}
+.rtitle{
+    flex-direction: column;
 }
 
 td {
-    
-    
     border: 3px solid #a97bf5;
     height: 100%;
     width: 100%;
+    flex: 2;
 
 }
-
-
-
-
-@media only screen and (min-width: 768px)
-{
-    main 
-    {
-        display: flex;
-    }
-    aside
-    {
-        margin-left: 2%;
-    }
-    .columns-desktop
-    {
-        display: flex;
-    }
-
+.head{
+    flex-direction: column;
 }
+
 /* Pies and cakes*/
 
 .pie, .cake
@@ -205,7 +192,6 @@ td {
     
     padding: 5px;
     margin: 5px;
-    
     justify-content: space-around;
 }
 
@@ -269,3 +255,24 @@ article
     
 }
 
+
+
+
+
+
+@media only screen and (min-width: 768px)
+{
+    main 
+    {
+        display: flex;
+    }
+    aside
+    {
+        margin-left: 2%;
+    }
+    .columns-desktop
+    {
+        display: flex;
+    }
+
+}
