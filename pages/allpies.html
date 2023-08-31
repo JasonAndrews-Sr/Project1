@@ -49,7 +49,7 @@
             border-radius: 3px;
             padding: 10px;
         }
-
+       
     </style>
 </head>
 <body>
@@ -78,70 +78,74 @@
                         <li><a href="/pages/cakes.html">Cakes</a></li>
                         <li><a href="/pages/pies.html">Fruit pies</a></li>
                         <li><a href="/pages/seasonal.html">Seasonal pies</a></li>
-                        <input type="search" placeholder="Search our site" /><button type="submit">Search</button>
+                        <input type="search" placeholder="Search our site" name="search" />
+                        <button type="submit">Search</button>
                     </ul>
             </aside>
         <div style="width:1000px;margin-left: auto;margin-right: auto;">
         
     <main>
             
-        <table border="1" style="justify-self: auto ;border:  8px ridge #23CFA7;">
+        <table border: 1 style=" flex-direction: column; border: 8px ridge #23CFA7;">
                
-                 
+               <div>  
                 <thead style="background-color:#a593c2; position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;">
                     
                     <tr>
-                        <th>Image</th>
+                        
                         <th>Name</th>
+                        <th>Image</th>
                         <th>Description</th>
                         <th>Price</th>
                         <th>Order</th>
                     </tr>
                 </thead>
+            </div>
                 <tr>
                     <th colspan="5" style="border:none;">Pies</th>
                 </tr>
                 
-                <tbody>   
+                <tbody class="pieTableBody">  
                    
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-cherry.jpg" style="width:100%;" alt="Cherry Pie" /></td>
-                        <td class="title">Cherry Pie</td>
-                        <td class="desc">A summer classic!</td>
+                    <tr class="pie product">
+                        <td class="title" id="cherry-pie">Cherry Pie</td>
+                        <td class="image" id="cherry-pie-image"><img src="/images/Products/pie-cherry.jpg" style="width:100%;" alt="Cherry Pie" /></td>
+                        
+                        <td class="description">A summer classic!</td>
                         <td class="price">$15.95</td>
                         <td><button data-order="pie-cherry">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-apple.jpg" style="width:100%;" alt="Apple Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Apple Pie</td>
+                        <td><img src="/images/Products/pie-apple.jpg" style="width:100%;" alt="Apple Pie" /></td>
                         <td class="desc">Our famous apple pie</td>
                         <td class="price">$12.95</td>
                         <td><button data-order="pie-apple">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-pecan.jpg" style="width:100%;" alt="Pecan Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Pecan Pie</td>
+                        <td><img src="/images/Products/pie-pecan.jpg" style="width:100%;" alt="Pecan Pie" /></td>
                         <td class="desc">My personal trainer's nightmare</td>
                         <td class="price">$18.95</td>
                         <td><button data-order="pie-pecan">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-peach.jpg" style="width:100%;" alt="Peach Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Peach Pie</td>
+                        <td><img src="/images/Products/pie-peach.jpg" style="width:100%;" alt="Peach Pie" /></td>
                         <td class="desc">Until it melts in your mouth, life is incomplete!</td>
                         <td class="price">$18.95</td>
                         <td><button data-order="pie-peach">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-cranberry.jpg" style="width:100%;" alt="Cranberry Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Cranberry Pie</td>
+                        <td><img src="/images/Products/pie-cranberry.jpg" style="width:100%;" alt="Cranberry Pie" /></td>
                         <td class="desc">So smooth, you beg for a bite</td>
                         <td class="price">$16.95</td>
                         <td><button data-order="pie-cranberry">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-rhubarb.jpg" style="width:100%;" alt="Rhubarb Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Rhubarb Pie</td>
+                        <td><img src="/images/Products/pie-rhubarb.jpg" style="width:100%;" alt="Rhubarb Pie" /></td>
                         <td class="desc">There is pie, <em>then there is pie...</em></td>
                         <td class="price">$15.95</td>
                         <td><button data-order="pie-rhubarb">Order</button></td>
@@ -150,23 +154,23 @@
                     <tr>
                     <th colspan="5" style="border:none;">Seasonal Pies</th>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-pumpkin.jpg" style="width:100%;" alt="Pumpkin Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Pumpkin Pie</td>
+                        <td><img src="/images/Products/pie-pumpkin.jpg" style="width:100%;" alt="Pumpkin Pie" /></td>
                         <td class="desc">There is just something about pie that's pumpkin!</td>
                         <td class="price">$15.95</td>
                         <td><button data-order="pie-pumpkin">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-strawberry.jpg" style="width:100%;" alt="Strawberry Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Strawberry Pie</td>
+                        <td><img src="/images/Products/pie-strawberry.jpg" style="width:100%;" alt="Strawberry Pie" /></td>
                         <td class="desc">I hope you buy this, I can't keep buying new pants.</td>
                         <td class="price">$19.95</td>
                         <td><button data-order="pie-strawberry">Order</button></td>
                     </tr>
-                    <tr class="pie">
-                        <td><img src="/images/Products/pie-christmas.jpg" style="width:100%;" alt="Christmas Pie" /></td>
+                    <tr class="pie product">
                         <td class="title">Christmas Apple Pie</td>
+                        <td><img src="/images/Products/pie-christmas.jpg" style="width:100%;" alt="Christmas Pie" /></td>
                         <td class="desc">A holiday must have!</td>
                         <td class="price">$18.95</td>
                         <td><button data-order="pie-cherry">Order</button></td>
@@ -176,42 +180,42 @@
                     <th colspan="5" style="border:none;">Cheescakes</th>
                     </tr>
 
-                    <tr class="cake">
-                        <td><img src="/images/Products/cake-blueberry.jpg" style="width:100%;" alt="Blueberry Cheesecake" /></td>
+                    <tr class="cake product">
                         <td class="title">Blueberry Cheesecake</td>
+                        <td><img src="/images/Products/cake-blueberry.jpg" style="width:100%;" alt="Blueberry Cheesecake" /></td>
                         <td class="desc">You have not experienced bliss just yet....</td>
                         <td class="price">$40.95</td>
                         <td><button data-order="cake-blueberry">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-vegan.jpg" style="width:100%;" alt="Vegan New York Cheesecake" /></td>
                         <td class="title">NYC Vegan Cheesecake</td>
                         <td class="desc">All the goodness and less guilt.</td>
                         <td class="price">$44.95</td>
                         <td><button data-order="cake-vegan">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-NYC.jpg" style="width:100%;" alt="New York Cheesecake" /></td>
                         <td class="title">New York Cheesecake</td>
                         <td class="desc">Simplicity at a exquisite level</td>
                         <td class="price">$39.95</td>
                         <td><button data-order="cake-NYC">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-german.jpg" style="width:100%;" alt="German Chocolate Cheesecake" /></td>
                         <td class="title">German Chocolate Cheesecake</td>
                         <td class="desc">German excellence in the sweetest of packages.</td>
                         <td class="price">$42.95</td>
                         <td><button data-order="cake-german">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-oreo.jpg" style="width:100%;" alt="Oreo Cheesecake" /></td>
                         <td class="title">Oreo Cheesecake</td>
                         <td class="desc">Its oreo......do I relly need to say more?</td>
                         <td class="price">$39.95</td>
                         <td><button data-order="cake-oreo">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-turtle.jpg" style="width:100%;" alt="Turtle Cheesecake" /></td>
                         <td class="title">Turtle Cheesecake</td>
                         <td class="desc">This turtle moves fast! Don't miss it by a hare.</td>
@@ -221,21 +225,21 @@
                     <tr>
                     <th colspan="5" style="border:none;"> Seasonal Cheescakes</th>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-strawberry.jpg" style="width:100%;" alt="Strawberry Cheesecake" /></td>
                         <td class="title">Strawberry Cheesecake</td>
                         <td class="desc">Don't cut this cake short.</td>
                         <td class="price">$40.95</td>
                         <td><button data-order="cake-strawberry">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-mango.jpg" style="width:100%;" alt="Mango Cheescake" /></td>
                         <td class="title">Mango Cheesecake</td>
                         <td class="desc">Tantilize your tastebuds and satisfy your craving.</td>
                         <td class="price">$44.95</td>
                         <td><button data-order="cake-mango">Order</button></td>
                     </tr>
-                    <tr class="cake">
+                    <tr class="cake product">
                         <td><img src="/images/Products/cake-orange.jpg" style="width:100%;" alt="Orange Cheescake" /></td>
                         <td class="title">Orange Cheesecake</td>
                         <td class="desc">Vitamin C always makes me feel better.</td>

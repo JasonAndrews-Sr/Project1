@@ -12,6 +12,7 @@ body
 
 p 
 {
+    
     margin: 0.5em 0 0.5em 0;
 }
 
@@ -33,7 +34,7 @@ button:link, a:link
 a:hover, button:hover, tr:hover
 {
     color:#0a9e7c;
-    font-size-adjust: 150%;
+    font-size-adjust: 180%;
     font-weight: bold;
 }
 section
@@ -75,10 +76,18 @@ nav>ul>li a
     font-weight: bold;
 }
 
+.searchbox 
+{
+    padding: 5px;
+    margin: 10px 10px;
+    width: 200px;
+}
+
 h1
 {
     color:#23CFA7
 }
+
 #main 
 {
     width: 70%;
@@ -89,10 +98,10 @@ h1
 footer
 {
     align-items: center;
-    
     width: 100%;
     
 }
+
 footer > nav >ul > li > a:visited, nav>ul>li a:visited
 {
   color:#23CFA7;
@@ -140,20 +149,25 @@ table
     text-align: center;
     vertical-align: middle;
     table-layout: fixed;
-    display:inline-flexbox;
+    display: inline-flex;
     justify-content: space-around;
+    
    
 }
 
-table, th, td, tr
+tr {
+    display:flex;
+    flex: 5;
+    align-items: center;
+}
+
+table, th, td
 { 
+    
     flex: 1;
     padding: 5px;
 }
-td
-{
-    background-color:#a593c2;
-}
+
 
 @media only screen and (min-width: 768px)
 {
@@ -175,12 +189,17 @@ td
 
 .pie, .cake
 {
-    width: 200px;
+    
     padding: 5px;
     margin: 5px;
+    
+    justify-content: space-around;
+}
+
+.tile{
+    width: 200px;
     background-color:#23CFA7;
     border: solid 3px #a97bf5;
-    justify-content: space-around;
 }
 
 .pie img, .cake img

@@ -99,34 +99,34 @@
                 
                 <div class="input-group">
                 
-                    <div><label for="first-name">First Name</label></div>
-                    <div><input type="text" name="first-name" id="first-name" autocomplete=off /></div>
+                    <div><label for="first-name" >First Name</label></div>
+                    <div><input type="text" name="first-name"placeholder= "First Name" id="first-name" autocomplete=off /></div>
                 </div>
 
                 <div class="input-group">
                     <div><label for="last-name">Last Name</label></div>
-                    <div><input type="text" name="last-name" id="last-name" /></div>
+                    <div><input type="text" name="last-name" placeholder= "Last Name" id="last-name" /></div>
                 </div>
 
                 <div class="input-group">
                     <div><label for="address">Address</label></div>
-                    <div><input type="text" name="address" id="address" autocomplete=off /></div>
+                    <div><input type="text" name="address" placeholder= "Address" id="address" autocomplete=off /></div>
                 </div>
                 <div class="input-group">
                     <div><label for="unit-number">Unit Number</label></div>
-                    <div><input type="text" name="unit-number" id="unit-number" /></div>
+                    <div><input type="text" name="unit-number" placeholder= "Unit Number" id="unit-number" /></div>
                 </div>
 
                 <div class="input-group">
                     <div><label for="city">City</label></div>
-                    <div><input type="text" name="city" id="city" /></div>
+                    <div><input type="text" placeholder= "City" name="city" id="city" /></div>
                 </div>
 
                 <div class="input-group">
                     <div><label for="state">State</label></div>
                     <div>
                         <select name="state" id="state">
-                            <option value="" selected>[Select One</option>
+                            <option value="" selected>Choose Your State</option>
                             <option value="Alabama">Alabama</option> 
                             <option value="Alaska">Alaska</option> 
                             <option value="Arizona">Arizona</option> 
@@ -181,7 +181,7 @@
 
                     <div class="input-group">
                     <div><label for="postal-code">Postal Code</label></div>
-                    <div><input type="text" name="postal-code" id="postal-code" autocomplete=off /></div>
+                    <div><input type="text" name="postal-code" placeholder= "Postal Code" id="postal-code" autocomplete=off /></div>
                 </div>
                 
                 <div class="input-group">
@@ -192,6 +192,7 @@
                             id="comments" 
                             cols="30" 
                             rows="10"
+                            placeholder= "We would love to hear from you. Please leave any request or comments here."
                         ></textarea> 
                     
                     </div>
@@ -255,21 +256,21 @@
             /* Turns pie string back into data*/
             const pieOrder = JSON.parse(order);
    
-          /*makes pie info a const*/
+          /*makes product info a const*/
             
         
-            const pie = document.querySelector(".pie");
-            const title = pie.querySelector(".title");
-            const price = pie.querySelector(".price");
-            const desc = pie.querySelector(".desc");
-            const orderInput = document.querySelector("#pie-order");
+            const product = document.querySelector(".product");
+            const title = product.querySelector(".title");
+            const price = product.querySelector(".price");
+            const desc = product.querySelector(".desc");
+            const orderInput = document.querySelector("#product-order");
             
        
 
-            /*enters pie info into new form pie-order*/
-            title.innerText = pieOrder.title;
-            price.innerText = pieOrder.price;
-            desc.innerText = pieOrder.desc;
+            /*enters product info into new form pie-order*/
+            title.innerText = productOrder.title;
+            price.innerText = productOrder.price;
+            desc.innerText = productOrder.desc;
             
 
 
