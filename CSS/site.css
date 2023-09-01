@@ -31,12 +31,22 @@ button:link, a:link
     text-decoration: none;
 }
 
-a:hover, button:hover, tr:hover
+button:hover, tr:hover, th:hover, .tile:hover 
 {
-    color:#0a9e7c;
-    font-size-adjust: 180%;
-    font-weight: bold;
+    color:#020a08;
+    font-size: 1.5em;
+    font-weight: bolder;
+    
 }
+    
+    
+a:hover
+{
+    color:#020a08;
+    font-size:1.1em;
+    font-weight: bold; 
+}    
+
 section
 {
     flex: 1;
@@ -83,6 +93,7 @@ nav>ul>li a
     width: 200px;
 }
 
+
 h1
 {
     color:#23CFA7
@@ -91,15 +102,13 @@ h1
 #main 
 {
     width: 70%;
-    margin-top: 10px;
-    
+    margin-top: 10px;       
 }
 
 footer
 {
     align-items: center;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 footer > nav >ul > li > a:visited, nav>ul>li a:visited
@@ -144,42 +153,56 @@ aside
     flex: 1;
 }
 
-table
+table, th, td
 {
     text-align: center;
-    vertical-align: middle;
-    table-layout: fixed;
-    display: inline-flex;
     flex-basis: 100%;
-    width: 80%;
-    
-   
+    width: 100%;
+    border-collapse:collapse;
+    border: 4px solid #a97bf5;  
 }
 
 tr {
-    display:flex;
-    flex: 5;
+    display: flex;
+    flex: 1;
     background-color:#23CFA7;
     border: solid 3px #a97bf5;
-    align-items: stretch;
-    
-}
+    align-items:center;
+    border-collapse: collapse;
+    text-align: center;
+    }
 
 th
 { 
-   
+    display: flex;
     padding: 5px;
+    border: 3px solid #a97bf5;
+    flex: 2;
+    text-align: center;
+    background-color: #23CFA7;
+    
+    
 }
 .rtitle{
     flex-direction: column;
+    width: 100%;
+    border: none;
+    border-top: none;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
 }
 
 td {
-    border: 3px solid #a97bf5;
-    height: 100%;
-    width: 100%;
+    display: flex;
     flex: 2;
-
+    padding: 5px;
+    border-top: none;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
 }
 .head{
     flex-direction: column;
@@ -189,16 +212,34 @@ td {
 
 .pie, .cake
 {
-    
     padding: 5px;
     margin: 5px;
     justify-content: space-around;
 }
+.product{
+    border: solid .5rem #a97bf5;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items:stretch;
+    
+    z-index: 4;
+}   
+    
+.hover-zoom{
+    transition: transform 0.3s;
+}
+
+.hover-zoom:hover {
+    transform: scale(2);
+    position: relative;
+}
 
 .tile{
-    width: 200px;
+    
     background-color:#23CFA7;
     border: solid 3px #a97bf5;
+    
 }
 
 .pie img, .cake img
@@ -230,9 +271,73 @@ td {
 {
     background-color: #f6aeae;
     padding: 10px;
-    border: solid 3px #f6aeae;
+    border: solid 1rem #f6aeae;
     border-radius: 3px;
     color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+    
+}
+
+
+
+.product{
+    border: solid .5rem #a97bf5;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items:stretch;
+    justify-content: space-around;
+    z-index: 4;
+}   
+    
+.hover-zoom{
+    transition: transform 0.3s;
+}
+
+.hover-zoom:hover {
+    transform: scale(2);
+    position: relative;
+}
+
+.product img
+{
+    height:auto;
+    width: 100%;
+
+}
+
+.product title
+{
+    font-weight: bold;
+}
+
+.product .columns
+{
+    width: 100%;
+}
+
+.product .price
+{
+    text-align: center;
+}
+.product .columns div
+{
+    width: 80%;
+}
+
+.product button
+{
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1rem #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+    
 }
 article
 {
@@ -251,8 +356,7 @@ article
     background-color:#a97bf5;
     border: 4px ridge #23CFA7;
     margin: 20px;
-    color:#057b5f;
-    
+    color:#057b5f;    
 }
 
 
