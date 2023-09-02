@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector(".carousel");
     const slides = document.querySelectorAll(".slide");
@@ -6,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? .1 : 0;
+            slide.style.transform = `translateX(${100 * (i - index)}%)`;
         });
     }
 
