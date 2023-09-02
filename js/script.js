@@ -8,13 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
+            console.log(currentIndex)
             slide.style.transform = `translateX(${100 * (i - index)}%)`;
+            console.log(currentIndex)
         });
     }
 
     function nextSlide() {
         currentIndex = (currentIndex + 1) % slides.length;
+        console.log(currentIndex)
         showSlide(currentIndex);
+        console.log(currentIndex)
     }
 
     function prevSlide() {
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Start the carousel after all images are loaded
     const images = document.querySelectorAll(".slide img");
     let loadedImages = 0;
+    
 
     images.forEach((image) => {
         image.addEventListener("load", function() {
@@ -32,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (loadedImages === images.length) {
                 showSlide(currentIndex);
                 setInterval(nextSlide, 3000);
+                console.log(currentIndex)
             }
         });
     });
