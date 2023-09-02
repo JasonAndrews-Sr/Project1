@@ -1,30 +1,22 @@
 
 body
 {
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #999;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-left: auto;
     background-color: #e6e4d9;
     background-image: url('/images/CSS/background.png');
 }
 
 p 
 {
-    
     margin: 0.5em 0 0.5em 0;
 }
 
-#mainheader
-{
-    background-color: #a593c2;
-}
-
-button:visited, a:visited
-{
+button:visited, a:visited{
     color: #23CFA7;
 }
+
 button:link, a:link
 {
     color: #fff;
@@ -39,11 +31,10 @@ button:hover, tr:hover, th:hover, .tile:hover
     
 }
     
-    
 a:hover
 {
     color:#020a08;
-    font-size:1.1em;
+    font-size:1.05em;
     font-weight: bold; 
 }    
 
@@ -53,27 +44,39 @@ section
 }
 nav 
 {
-    height: 60px;
-    width: 1000px;
-    margin: 0 auto 10px;
-    font-size: 24px;
+    display: flex;
+    background-color: #a593c2;
     text-align: center;
-    justify-items: center;
+    justify-items: stretch;
+    justify-content: center;
     align-content: space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
 }
 
 nav > ul 
 {
+    display: flex;
+    flex: 1;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     overflow: hidden;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
 }
 
 nav > ul > li
+
 {
-    float: left;
+    display: flex;
+    text-align: center;
+    flex: 1;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
 }
 
 nav>ul>li a
@@ -81,21 +84,22 @@ nav>ul>li a
     display: flex;
     color: #a593c2;
     text-align: center;
-    padding: 16px;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
 }
 
 .searchbox 
 {
-    padding: 5px;
-    margin: 10px 10px;
-    width: 200px;
+    padding: 5px 0;
+    margin:  5px 0;
+    width: 80%;
 }
 
 
 h1
 {
+    display: flex;
     color:#23CFA7
 }
 
@@ -107,7 +111,7 @@ h1
 
 footer
 {
-    align-items: center;
+
     width: 100%;    
 }
 
@@ -124,12 +128,12 @@ footer > nav >ul > li > a:hover, nav>ul>li a:hover
 #left-menu
 {
     float: left;
-    width: 20%;
     margin-bottom: 10px;
-    position: -webkit-sticky;
+    position:-webkit-sticky;
     position: sticky;
     top: 0px; 
     z-index: 100;
+    height: 100%;
 }
 
 aside
@@ -153,57 +157,7 @@ aside
     flex: 1;
 }
 
-table, th, td
-{
-    text-align: center;
-    flex-basis: 100%;
-    width: 100%;
-    border-collapse:collapse;
-    border: 4px solid #a97bf5;  
-}
 
-tr {
-    display: flex;
-    flex: 1;
-    background-color:#23CFA7;
-    border: solid 3px #a97bf5;
-    align-items:center;
-    border-collapse: collapse;
-    text-align: center;
-    }
-
-th
-{ 
-    display: flex;
-    padding: 5px;
-    border: 3px solid #a97bf5;
-    flex: 2;
-    text-align: center;
-    background-color: #23CFA7;
-    
-    
-}
-.rtitle{
-    flex-direction: column;
-    width: 100%;
-    border: none;
-    border-top: none;
-    flex: 1;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-collapse: collapse;
-}
-
-td {
-    display: flex;
-    flex: 2;
-    padding: 5px;
-    border-top: none;
-    border-collapse: collapse;
-    justify-content: center;
-    align-items: center;
-}
 .head{
     flex-direction: column;
 }
@@ -216,16 +170,7 @@ td {
     margin: 5px;
     justify-content: space-around;
 }
-.product{
-    border: solid .5rem #a97bf5;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    align-items:stretch;
-    
-    z-index: 4;
-}   
-    
+
 .hover-zoom{
     transition: transform 0.3s;
 }
@@ -235,12 +180,7 @@ td {
     position: relative;
 }
 
-.tile{
-    
-    background-color:#23CFA7;
-    border: solid 3px #a97bf5;
-    
-}
+
 
 .pie img, .cake img
 {
@@ -271,7 +211,7 @@ td {
 {
     background-color: #f6aeae;
     padding: 10px;
-    border: solid 1rem #f6aeae;
+    border: solid 1px #f6aeae;
     border-radius: 3px;
     color: #fff;
     text-align: center;
@@ -280,27 +220,15 @@ td {
     
 }
 
-
-
-.product{
-    border: solid .5rem #a97bf5;
-    padding: 0px;
-    margin: 0px;
+.pie, .cake{
+    padding: 5px;
+    margin: 5px;
     display: flex;
     align-items:stretch;
-    justify-content: space-around;
+    justify-content: space-evenly;
     z-index: 4;
-}   
-    
-.hover-zoom{
-    transition: transform 0.3s;
 }
-
-.hover-zoom:hover {
-    transform: scale(2);
-    position: relative;
-}
-
+     
 .product img
 {
     height:auto;
@@ -339,13 +267,19 @@ td {
     align-items: center ;
     
 }
+.product{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items:stretch;
+    z-index: 4;
+    border-collapse: collapse;
+       
+}
 article
 {
-    width: 60%;
-    padding-top: 0; 
-    padding-left: 5em; 
-    padding-bottom: 0; 
-    padding-right: 0;
+    flex: 1;
+    
 }
 .contact
 {
@@ -353,12 +287,113 @@ article
     text-align: center;
     background-size: 100%;
     font-size: 24px;
-    background-color:#a97bf5;
-    border: 4px ridge #23CFA7;
+    border: 3px ridge #23CFA7;
     margin: 20px;
     color:#057b5f;    
 }
+.tile{
+    width: 200px;
+    background-color:#23CFA7;
+    display: block;
+    
+}
+table, th, td, tr
+{
+    border: 5px solid #a593c2;
+    border-bottom:none;
+    border-collapse: collapse;
+    text-align: center;
+    background-color:#23CFA7;
+    justify-content: center;
+    align-items: center;
+}
 
+tr {
+    display: flex;
+    flex: 1;
+    align-items:center;
+    }
+
+th
+{ 
+    flex:2;
+}
+.rtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;   
+}
+
+td {
+    display: flex;
+    flex: 2;
+    
+}
+.carousel {
+    display: flex;
+    overflow:hidden;
+    width:100%; /* Adjust the width and height as needed */
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.slide {
+    flex: 0 0 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:auto;
+    opacity: 0; /* Initially hide all slides */
+    animation: granulate 2s ease-in-out infinite; /* Apply the granulate animation */
+}
+.carousel img{
+    object-fit: cover;
+    height:auto;
+    width: 100%;
+}
+
+@keyframes granulate {
+    
+    0%{
+        opacity: 0; /* Start and end with opacity 0 (hidden) */
+    }
+    10%{
+        opacity: .1; /* Gradually reveal the slide during these keyframes */
+    }
+    20%{
+        opacity: .2; /* Gradually reveal the slide during these keyframes */
+    }
+    30%{
+        opacity: .3; /* Gradually reveal the slide during these keyframes */
+    }
+    40%{
+        opacity: .4; /* Gradually reveal the slide during these keyframes */
+    }
+    50%{
+        opacity: .5; /* Gradually reveal the slide during these keyframes */
+    }
+    60%{
+        opacity: .6; /* Gradually reveal the slide during these keyframes */
+    }
+    70%{
+        opacity: .7; /* Gradually reveal the slide during these keyframes */
+    }
+
+    80%{
+        opacity: .8; /* Gradually reveal the slide during these keyframes */
+    }
+    90%{
+        opacity: .9; /* Gradually reveal the slide during these keyframes */
+    }
+    100%{
+        opacity: 1; /* Gradually reveal the slide during these keyframes */
+    }
+}
 
 
 

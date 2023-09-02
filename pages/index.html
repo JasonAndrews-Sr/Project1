@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +8,91 @@
     
 </head>
 <body>
-    <header id="mainheader">
+    
+    <aside id="left-menu">
+        <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop"></a>
+        <header>
+            <h3 style="color: #23CFA7;">Browse Our Pies</h3>
+        </header>
+        <ul>
+                <li><a href="allpies.html">All Pies and Cakes</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                    
+        </ul>
+                
+        <form action="/search" method="get">
+            <input class="searchbox" type="search" placeholder="Search our site" />
+            <button type="submit">Search</button>
+        </form>
+    </aside>
+    <header>
         <nav>
             <ul>
-            <li><a style="padding: 0;" href="/pages/index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
-            <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
-            <li><a href="/pages/cakes.html ">Cakes</a></li>
-            <li><a href="/pages/pies.html">Pies</a></li>
-            <li><a href="/pages/seasonal.html">Seasonal</a></li>
-            <li><a href="/pages/contact.html">Contact Us</a></li>
+            <li><a style="padding: 0;" href="index.html"></a> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
+            <li><a href="allpies.html">All Pies and Cakes</a></li>
+            <li><a href="cakes.html ">Cakes</a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="seasonal.html">Seasonal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             
             </ul>
         </nav>
     </header>
-    
-    
-        <aside id="left-menu">
-            <a href="/pages/index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop"></a>
-            <header>
-                <h3 style="color: #23CFA7;">Browse Our Pies</h3>
-            </header>
-                <ul>
-                    <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
-                    <li><a href="/pages/cakes.html">Cakes</a></li>
-                    <li><a href="/pages/pies.html">Pies</a></li>
-                    <li><a href="/pages/seasonal.html">Seasonal pies</a></li>
-                    <li><a href="/pages/contact.html">Contact Us</a></li>
-                    <input type="search" placeholder="Search our site" /><button type="submit">Search</button>
-                </ul>
-        </aside>
-    </div>
-    <div style="margin-left: auto;margin-right: auto;">
+    <div style="margin: 0 auto;">
     <main id="main">
         <article>
             <header>
-            <h1 style="color: #a593c2; font-size: 35px;">Welcome to Bethany's Pie Shop</h1>
-        </header>
-        <figure>
-            <img src="/images/Bethany/bethany-fullsize.jpg" width="600px" alt="Bethany's Pie Shop" class="hover-zoom">
-            <figcaption>Bethany in her pie shop</figcaption>
-        </figure>
-        <h2>Our history<small> so far</small></h2>
-        <p style="text-align: left;"> For many years, <strong>Bethany</strong> has been baking the most delicious<br>
-            pies at her home. In 2013, we opened our first store in<br> 
-            Brussels(Belgium) in a cosy little street near the Grand<br>
-            Market. People from all over the world fell in love with the<br> 
-            soft cakes, heavenly cheesecakes, spicy pies....<br>
-            <em><mark>The store became a success in no time.</mark></em>
-        </p>
-        <p style="text-align: left;"> <b>In 2015</b>, no less than <strong>100</strong> pies were old every day and<br>
-            Bethany's Pie Shop moved in to a larger building after<br>
-            making a &euro; 2000 revenue. After recieving many requests,<br>
-            it became clear that our next step was making it possible to<br>
-            order pies from the comfort of your home and from<br>
-            anywhere in the world. You are now looking at the result of<br>
-            this: our very own webstore, making it possible to order<br>
-            Bethany's delicious pies whenever you feel like it! Download<br>
-            our &rarr;<a href="/pages/allpies.html" style="text-decoration: underline;">price list</a>
-        </p>
-        </article>
+                <h1>Welcome to Bethany's Pie Shop</h1>
+            </header>
+        
+            <div class="carousel">
+                <div class="slide"><img src="../images/Products/carousel1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="../images/Products/carousel2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="../images/Products/carousel3.jpg" alt="Image 3"></div>
+            </div>
+        
+            <button class="prev-button">Previous</button>
+            <button class="next-button">Next</button>
+            
+            <h2>Our history<small> so far</small></h2>
+            <p>For many years, <strong>Bethany</strong> has been baking the most delicious
+                pies at her home. In 2013, we opened our first store in 
+                Brussels(Belgium) in a cosy little street near the Grand
+                Market. People from all over the world fell in love with the 
+                soft cakes, heavenly cheesecakes, spicy pies....
+                <em><mark>The store became a success in no time.</mark></em>
+            </p>
+            <p><b>In 2015</b>, no less than <strong>100</strong> pies were old every day and
+                Bethany's Pie Shop moved in to a larger building after
+                making a &euro; 2000 revenue. After recieving many requests,
+                it became clear that our next step was making it possible to
+                order pies from the comfort of your home and from
+                anywhere in the world. You are now looking at the result of
+                this: our very own webstore, making it possible to order
+                Bethany's delicious pies whenever you feel like it! Download
+                our &rarr;<a href="allpies.html">price list</a>
+            </p>
+       </article>
     </main>
 </div>
+
     
     <footer>
         <nav>
             <ul>
-                <li><a style="padding: 0;" href="/pages/index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
-            <li><a href="/pages/allpies.html">All Pies and Cakes</a></li>
-            <li><a href="/pages/cakes.html">Cakes</a></li>
-            <li><a href="/pages/pies.html">Pies</a></li>
-            <li><a href="/pages/seasonal.html">Seasonal</a></li>
-            <li><a href="/pages/contact.html">Contact Us</a></li>
+            <li><a style="padding: 0;" href="index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
+            <li><a href="allpies.html">All Pies and Cakes</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pies.html">Pies</a></li>
+            <li><a href="seasonal.html">Seasonal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             
         </nav>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>
