@@ -1,0 +1,410 @@
+
+body
+{
+   
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e4d9;
+    background-image: url('/images/CSS/background.png');
+}
+
+p 
+{
+    margin: 0.5em 0 0.5em 0;
+}
+
+button:visited, a:visited{
+    color: #23CFA7;
+}
+
+button:link, a:link
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+button:hover, tr:hover, th:hover, .tile:hover 
+{
+    color:#020a08;
+    font-size: 1.5em;
+    font-weight: bolder;
+    
+}
+    
+a:hover
+{
+    color:#020a08;
+    font-size:1.05em;
+    font-weight: bold; 
+}    
+
+section
+{
+    flex: 2;
+}
+nav 
+{
+    display: flex;
+    background-color: #a593c2;
+    text-align: center;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
+}
+
+nav > ul 
+{
+    display: flex;
+    flex: 1;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav > ul > li
+
+{
+    display: flex;
+    text-align: center;
+    flex: 1;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
+}
+
+nav>ul>li a
+{
+    display: flex;
+    color: #a593c2;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.searchbox 
+{
+    padding: 5px 0;
+    margin:  5px 0;
+    width: 100%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+h1
+{
+    display: flex;
+    color:#23CFA7;
+    text-align: center;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;
+}
+
+#main 
+{
+    width: 70%;
+    margin-top: 10px;       
+}
+
+footer > nav >ul > li > a:visited, nav>ul>li a:visited
+{
+  color:#23CFA7;
+}
+
+footer > nav >ul > li > a:hover, nav>ul>li a:hover
+{
+    color:#0a9e7c;
+}
+
+#left-menu
+{
+    float: left;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    height: auto;
+}
+
+aside
+{
+    display: flex;
+    text-align: left;
+    flex: 2;
+    flex-direction: column;
+    justify-items: stretch;
+    margin: 20px;
+    width:12%;  
+}
+
+.columns
+{
+    display:flex;
+    
+}
+
+.columns > div
+{
+    flex: 1;
+}
+
+.columns-desktop
+{
+    flex: 1;
+}
+
+
+.head{
+    flex-direction: column;
+}
+
+/* Pies and cakes*/
+
+.pie, .cake
+{
+    padding: 5px;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.hover-zoom{
+    transition: transform 0.3s;
+}
+
+.hover-zoom:hover {
+    transform: scale(2);
+    position: relative;
+}
+
+
+
+.pie img, .cake img
+{
+    width: 100%;
+    height: 50%;
+}
+
+.pie .title, .cake .title
+{
+    font-weight: bold;
+}
+
+.pie .columns, .cake .columns
+{
+    width: 100%;
+}
+
+.pie .price, .cake .price
+{
+    text-align: center;
+}
+.pie .columns div, .cake .columns div
+{
+    width: 80%;
+}
+
+.pie button, .cake button
+{
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+    
+}
+
+.pie, .cake{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    align-items:stretch;
+    justify-content: space-evenly;
+    z-index: 4;
+}
+     
+.product img
+{
+    height:auto;
+    width: 100%;
+
+}
+
+.product title
+{
+    font-weight: bold;
+}
+
+.product .columns
+{
+    width: 100%;
+}
+
+.product .price
+{
+    text-align: center;
+}
+.product .columns div
+{
+    width: 80%;
+}
+
+.product button
+{
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1rem #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+    
+}
+.product{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items:stretch;
+    z-index: 4;
+    border-collapse: collapse;
+       
+}
+article
+{
+    width: 80%;
+    
+    
+}
+.contact
+{
+    padding: 20px; 
+    text-align: center;
+    background-size: 100%;
+    font-size: 24px;
+    border: 3px ridge #23CFA7;
+    margin: 20px;
+    color:#057b5f;    
+}
+.tile{
+    width: 200px;
+    background-color:#23CFA7;
+    display: block;
+    
+}
+table, th, td, tr
+{
+    border: 5px solid #a593c2;
+    border-bottom:none;
+    border-collapse: collapse;
+    text-align: center;
+    background-color:#23CFA7;
+    justify-content: center;
+    align-items: center;
+}
+
+tr {
+    display: flex;
+    flex: 1;
+    align-items:center;
+    }
+
+th
+{ 
+    flex:2;
+}
+.rtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;   
+}
+
+td {
+    display: flex;
+    flex: 2;
+    
+}
+.carousel {
+    
+    overflow:hidden;
+    width:100%; /* Adjust the width and height as needed */
+    height:400px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.slide {
+    flex: 0 0 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:auto;
+    opacity: 0; /* Initially hide all slides */
+    animation: granulate 2s ease-in-out infinite; /* Apply the granulate animation */
+}
+.carousel img{
+    object-fit: cover;
+    height:auto;
+    width: 100%;
+}
+
+@keyframes granulate {
+    
+    0%, 100%{
+        opacity: 0; /* Start and end with opacity 0 (hidden) */
+    }
+    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%{
+        opacity: 1; /* Gradually reveal the slide during these keyframes */
+    }
+    
+}
+
+main div{
+    flex: 2;
+}
+
+.header, .footer{
+    width: 100%;
+    flex:1;
+}
+main{
+    display: flex;
+}
+
+
+@media only screen and (min-width: 768px)
+{
+    main 
+    {
+        display: flex;
+    }
+    aside
+    {
+        margin-left: 2%;
+    }
+    .columns-desktop
+    {
+        display: flex;
+    }
+
+}
+
+
+
