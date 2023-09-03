@@ -3,50 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/site.css" type="text/css" />
+    <link rel="stylesheet" href="../CSS/site.css" type="text/css" />
     <title>Cakes| Bethany's Pie Shop</title>
-   
+    
 </head>
 <body>
     <header class="header" id="mainheader">
         <nav>
             <ul class="list">
                 <li><a style="padding: 0;" href="index.html"><img src="/images/CSS/logos/pie.png" height="55"></a></li>
-                <li><a href="allpies.html">All Pies and Cakes</a></li>
+                <li><a href="allpies.html">All Products</a></li>
                 <li><a href="pies.html">Fruit Pies</a></li>
-                <li><a href="seasonal.html">Seasonal Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                
             </ul>
         </nav>
-    </header>
+        </header>
             <aside id="left-menu">
                 <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop"></a>
                 <header>
                     <h3>Browse Our Pies</h3>
                 </header>
-                <ul class="list">
-                        
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="allpies.html">All Pies and Cakes</a></li>
-                    <li><a href="pies.html">Fruit Pies</a></li>
-                    <li><a href="seasonal.html">Seasonal Pies</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    
-                </ul>
-                <form action="/search" method="get"class="searchbox">
-                    <label>Search Our Site</label>
-                    <input  type="search"class="searchbox" placeholder="Search our site"style="flex: 3" />
-                    <button type="submit">Search</button>
-                </form>
-
-            </aside>
-            <header>
-                <h1>Cheesecakes</h1>
-            </header>
-    <main id="main">
-        <div style="margin: 0 auto;">          
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allpies.html">All Pies and Cakes</a></li>
+                        <li><a href="cakes.html">Cheeesecakes</a></li>
+                        <li><a href="pies.html">Fruit Pies</a></li>
+                        <li><a href="seasonal.html">Seasonal</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>               
+                    <form action="/search" method="get"class="searchbox">
+                        <label>Search Our Site</label>
+                        <input  type="search"class="searchbox" placeholder="Search our site"style="flex: 3" />
+                        <button type="submit">Search</button>
+                    </form>
+        </aside>
+        
+    <main>
         <article>
+            <h1>Cheesecakes</h1>
             <section class="columns-desktop">
                 
                 <div class="cake tile">
@@ -119,59 +114,61 @@
     
         </article>
     </main>
-</div>
 
-<footer>
+
+    <footer>
         <nav>
             <ul class="list">
-            <li><a style="padding: 0;" href="index.html"></index> <img src="/images/css/logos/pie.png" height="55"></a></li>
-            <li><a href="allpies.html">All Pies and Cakes</a></li>
-            <li><a href="pies.html">Fruit Pies</a></li>
-            <li><a href="seasonal.html">Seasonal Pies</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+                <li><a style="padding: 0;" href="index.html"><img src="/images/css/logos/pie.png" height="55"></a></li>
+                <li><a href="allpies.html">All Products</a></li>
+                <li><a href="pies.html">Fruit Pies</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </footer>
     
    
-</body>
-<script>
-    /*Looks for page to completely load*/
-    window.addEventListener("DOMContentLoaded", function(e)
-    {
-        /*Searches for data-order class on a buttons*/
-        const orderButtons = document.querySelectorAll("button[data-order]");
-        
-        /*Checks each button to see if it has been clicked */
-        orderButtons.forEach(function(button)
+
+    <script type="text/javascript">
+            /*Looks for page to completely load*/
+            window.addEventListener("DOMContentLoaded", function(e)
         {
-            /* Has program search for button clicks*/
-            button.addEventListener("click", function(e)
-            {   
-                /*Detects button press and sets as current target*/
-                const button = e.currentTarget;
-                /*sets div container as the parent node of the button */
-                const container = button.parentNode;
-                
-                /*sets information for order based on button pressed*/
-                const order = 
-                {
-                    /*returns information from button pressed*/
-                    id: (id = button.getAttribute("data-order")),
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    desc: container.querySelector(".desc").innerText
-                };
-            /*takes ordered item and stores information as a sting*/
-            localStorage.setItem("order", JSON.stringify(order));
-            
-            /* sets const var url to location and replaces cakes.html with order.html*/            
-            const url = window.location.href.replace("cakes.html", "order.html");
-           
-            /*Sets window location to order.html*/
-            window.location.href = url;
+            /*Searches for data-order class on a buttons*/
+            const orderButtons = document.querySelectorAll("button[data-order]");
         
-            });
+            /*Checks each button to see if it has been clicked */
+            orderButtons.forEach(function(button)
+            {
+                /* Has program search for button clicks*/
+                button.addEventListener("click", function(e)
+                {   
+                    /*Detects button press and sets as current target*/
+                    const button = e.currentTarget;
+                    /*sets div container as the parent node of the button */
+                    const container = button.parentNode;
+                
+                    /*sets information for order based on button pressed*/
+                    const order = 
+                    {
+                        /*returns information from button pressed*/
+                        id: (id = button.getAttribute("data-order")),
+                        title: container.querySelector(".title").innerText,
+                        price: container.querySelector(".price").innerText,
+                        desc: container.querySelector(".desc").innerText
+                    };
+                /*takes ordered item and stores information as a sting*/
+                localStorage.setItem("order", JSON.stringify(order));
+            
+                /* sets const var url to location and replaces cakes.html with order.html*/            
+                const url = window.location.href.replace("cakes.html", "order.html");
+           
+                /*Sets window location to order.html*/
+                window.location.href = url;
+        
+                });
+            })
         })
-    })
-</script>
+        </script>
+    </body>
 </html>
