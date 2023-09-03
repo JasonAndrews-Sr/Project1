@@ -8,9 +8,29 @@
    
 </head>
 <body>
-    <header id="mainheader">
+    <aside id="left-menu">
+                <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <header>
+                    <h3>Browse Our Pies</h3>
+                </header>
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allpies.html">All Pies and Cakes</a></li>
+                        <li><a href="cakes.html">Cheesecakes</a></li>
+                        <li><a href="pies.html">Fruit Pies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    
+                    <form action="/search" method="get"class="searchbox">
+                        <label>Search Our SiTE</label>
+                        <input  type="search"class="searchbox" placeholder="Search our site"style="flex: 3" />
+                        <button type="submit">Search</button>
+                    </form>
+                    </aside>
+            
+    <header class="header" id="mainheader"></header>
         <nav>
-            <ul>
+            <ul class="list">
                 <li><a style="padding: 0;" href="index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
                 <li><a href="allpies.html">All Pies and Cakes</a></li>
                 <li><a href="cakes.html">Cheesecakes</a></li>
@@ -18,25 +38,13 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-        </header>
+   
         
-        
-            <aside id="left-menu">
-                <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
-                <header>
-                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
-                </header>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="allpies.html">All Pies and Cakes</a></li>
-                        <li><a href="cakes.html">Cheesecakes</a></li>
-                        <li><a href="pies.html">Fruit Pies</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <input type="search" placeholder="Search our site" /><button type="submit">Search</button>
-                    </ul>
-            </aside>
+    <main>  
+        <div>  
+            
         </div>
-    <main>
+    
         <article>
         
             <h1>Seasonal Fruit Pies</h1>
@@ -75,7 +83,7 @@
                     <button data-order="pie-christmas">Order</button>
             </section>
 
-            <h1 style="color: #a593c2;width: 70%; text-align: center;">Seasonal Cheesecakes</h1>
+            <h1>Seasonal Cheesecakes</h1>
             <section class="columns-desktop">
                 <div class="cake tile">
                     <img src="/images/Products/cake-strawberry.jpg" alt="Strawberry Cheesecake" class="hover-zoom" />
@@ -110,14 +118,17 @@
                     <button data-order="cake-orange">Order</button>
                 </div>
             </section>
-    <footer>
-        <nav style="justify-content:space-around; align-items:normal;" >
-            <ul>
+        </article>
+
+    <footer class="footer">
+        <nav>
+            <ul class="list">
                 <li><a style="padding: 0;" href="index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
                 <li><a href="allpies.html">All Pies and Cakes</a></li>
-            <li><a href="cakes.html">Cheesecakes</a></li>
-            <li><a href="pies.html">Fruit Pies</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cakes.html">Cheesecakes</a></li>
+                <li><a href="pies.html">Fruit Pies</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </footer>
         </article>
