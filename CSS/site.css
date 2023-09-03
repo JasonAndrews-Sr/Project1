@@ -206,10 +206,11 @@ input[type="submit"]
 
 .pie img, .cake img
 {
-    width: 75%;
-    height: 300px;
+    display: flex;
+    width:70%;
     padding: 10px;
-    flex: 1;
+    object-fit: cover;
+    justify-content: center;
     
 }
 
@@ -362,9 +363,7 @@ td {
     
 }
 
-main div{
-    flex: 2;
-}
+
 
 .header, .footer{
     width: 100%;
@@ -386,11 +385,14 @@ main{
 }
 .hover-zoom{
     transition: transform 0.3s;
+    height: fit-content;
 }
 
 .hover-zoom:hover {
     transform: scale(2);
     position: relative;
+    top: 50px;
+
     z-index: 100;
     box-shadow: 0 0 15px gold;
     border-radius: 80%;
@@ -477,12 +479,11 @@ footer > nav >ul > li > a:hover, nav>ul>li a:hover
 
 .slide {
     flex: 0 0 100%;
-    position:absolute;
+    position:absolute   ;
     top: 0;
     left: 0;
     width:100%;
     height:auto;
-    opacity: 0; /* Initially hide all slides */
     animation: granulate 2s ease-in-out infinite; /* Apply the granulate animation */
 }
 .carousel img{
