@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
    
 </head>
 <body>
-    <header>
+    <header class="header" id="mainheader">
         <nav>
             <ul class="list">
-                <li><a style="padding: 0;" href="index.html"></index> <img src="/images/CSS/logos/pie.png" height="55"></a></li>
+                <li><a style="padding: 0;" href="index.html"><img src="/images/CSS/logos/pie.png" height="55"></a></li>
                 <li><a href="allpies.html">All Pies and Cakes</a></li>
                 <li><a href="pies.html">Fruit Pies</a></li>
                 <li><a href="seasonal.html">Seasonal Pies</a></li>
@@ -21,26 +21,32 @@
         </nav>
     </header>
             <aside id="left-menu">
-                <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop" style="margin:auto;"></a>
+                <a href="index.html"><img src="/images/CSS/logos/logo.png" alt="Bethany's Pie Shop"></a>
                 <header>
-                    <h4 style="text-align: left;color: #23CFA7;">Browse Our Pies</h4>
+                    <h3>Browse Our Pies</h3>
                 </header>
                 <ul class="list">
                         
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="allpies.html">All Pies and Cakes</a></li>
-                        <li><a href="pies.html">Fruit Pies</a></li>
-                        <li><a href="seasonal.html">Seasonal Pies</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <input type="search" placeholder="Search our site" /><button type="submit">Search</button>
-                        </ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="allpies.html">All Pies and Cakes</a></li>
+                    <li><a href="pies.html">Fruit Pies</a></li>
+                    <li><a href="seasonal.html">Seasonal Pies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                </ul>
+                <form action="/search" method="get"class="searchbox">
+                    <label>Search Our Site</label>
+                    <input  type="search"class="searchbox" placeholder="Search our site"style="flex: 3" />
+                    <button type="submit">Search</button>
+                </form>
+
             </aside>
-        </div>
-    <div style="margin-left: auto;margin-right: auto;">
-    <main>
-          
+            <header>
+                <h1>Cheesecakes</h1>
+            </header>
+    <main id="main">
+        <div style="margin: 0 auto;">          
         <article>
-            <h1 style="color: #a593c2;width: 70%; text-align: center; padding:15px;">Cheesecake</h1>
             <section class="columns-desktop">
                 
                 <div class="cake tile">
@@ -110,8 +116,13 @@
                     <button data-order="cake-turtle">Order</button>
                 </div>
             </section> 
-    <footer>
-        <nav style="text-align: center;" >
+    
+        </article>
+    </main>
+</div>
+
+<footer>
+        <nav>
             <ul class="list">
             <li><a style="padding: 0;" href="index.html"></index> <img src="/images/css/logos/pie.png" height="55"></a></li>
             <li><a href="allpies.html">All Pies and Cakes</a></li>
@@ -120,10 +131,6 @@
             <li><a href="contact.html">Contact Us</a></li>
         </nav>
     </footer>
-
-        </article>
-    </main>
-    </div>
     
    
 </body>
