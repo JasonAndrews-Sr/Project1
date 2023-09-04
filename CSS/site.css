@@ -41,77 +41,7 @@ aside img{
     border-radius: 50%;
 }
 
-aside{
-    display: flex;
-    text-align: left;
-    flex: 1;
-    flex-direction: column;
-    justify-items: center;
-    margin: 2%;
-    width:16%;
-    flex-wrap:wrap;
-    align-items: center;
-     
-}
 
-#left-menu
-{
-    float: left;
-    margin-bottom: 10px;
-    position: sticky;
-    top: 0px;
-    height: auto;
-    
-}
-
-.list{
-    list-style-type: none;
-}
-
-
-nav > ul > li a, nav > ul > li img{
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    text-shadow: 2px 2px 15px black;
-
-}
-
-nav > ul > li{
-    text-align: center;
-    flex: 1;
-    justify-items: stretch;
-    justify-content: center;
-    align-content: space-around;
-    align-items:stretch;
-    flex-wrap: wrap;
-    display: flex;
-}
-
-nav > ul{
-    display: flex;
-    flex: 1;
-    margin: 0;
-    padding-left: 10px;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-
-}
-
-nav 
-{
-    display: flex;
-    background-color: #a593c2;
-    text-align: center;
-    justify-items: stretch;
-    justify-content: center;
-    align-content: space-around;
-    align-items:stretch;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px black;    
-}
 
 p 
 {
@@ -415,13 +345,12 @@ main{
     flex-direction: column;
 }
 
-button:visited, a:visited{
-    color: #23CFA7;
+
 }
 
 button:link, a:link
 {
-    color: #fff;
+    color: #23CFA7;
     text-decoration: none;
 }
 
@@ -440,20 +369,6 @@ button:link, a:link
     color: #997bca;
 }
 
-button:hover, tr:hover, th:hover 
-{
-    color:#020a08;
-    font-size: 1.5em;
-    font-weight: bolder;
-    
-}
-    
-a:hover, .logo
-{
-    color:#020a08;
-    font-size:1.05em;
-    font-weight: bold; 
-}    
 
 section
 {
@@ -525,4 +440,127 @@ h4{
     font-size: large;
     text-shadow: 2px 2px 5px white;
     text-align: center;
+}
+
+aside{
+    display: flex;
+    text-align: left;
+    flex: 1;
+    flex-direction: column;
+    justify-items: center;
+    margin: 2%;
+    width:16%;
+    flex-wrap:wrap;
+    align-items: center;
+     
+}
+
+aside > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+aside > ul > li{
+    background:#a593c2;
+    margin-bottom: 2px;
+    padding: 8px;
+    color: white;
+    text-shadow: 2px 2px 15px black;font-size: smaller;
+    text-align: center;
+    
+}
+
+#left-menu
+{
+    float: left;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    height: auto;
+    
+}
+
+.list{
+    list-style-type: none;
+}
+
+
+nav > ul > li a, nav > ul > li img{
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: 2px 2px 15px black;
+
+}
+
+nav > ul > li{
+    text-align: center;
+    flex: 1;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+nav > ul{
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding-left: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav 
+{
+    display: flex;
+    background-color: #a593c2;
+    text-align: center;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px black;    
+}
+button:hover, tr:hover, th:hover, a:hover 
+{
+    color:#020a08;
+    font-size: 1.5em;
+    font-weight: bolder;
+    
+    
+}
+    
+a:hover, .logo
+{
+    background-image: none;
+    font-size:1.05em;
+    font-weight: bold;
+    background: radial-gradient(gold,#997bca, #23CFA7 ); 
+}    
+
+aside > ul > li > a{
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    display: flex;
+}
+
+aside > ul > li span{
+    opacity: 0;
+    
+}
+
+
+button:visited, a:visited{
+    color:#23CFA7;
+    box-shadow: 2px 2px 3px white;
 }
