@@ -1,11 +1,12 @@
 body{
     background-color: #a593c2;
     background-image: url('/images/CSS/background.png');
-    font-size: 16px;
+    font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     flex-flow:column wrap;
     margin: 0 auto;
-    overflow: visible;    
+    overflow: visible;  
+      
 }
 
 button{
@@ -109,8 +110,6 @@ input[type="submit"]
 {
     display:flex;
     justify-content: flex-end;
-    
-    
 }
 
 .columns > div
@@ -140,8 +139,8 @@ input[type="submit"]
 {
     display: flex;
     width:70%;
-    padding: 10px;
-    object-fit: cover;
+    height:50%;
+    padding: 0;
     justify-self: center;
     
 }
@@ -346,7 +345,7 @@ main{
 }
 
 
-}
+
 
 button:link, a:link
 {
@@ -448,8 +447,8 @@ aside{
     flex: 1;
     flex-direction: column;
     justify-items: center;
-    margin: 2%;
-    width:16%;
+    margin: 1%;
+    width:20%;
     flex-wrap:wrap;
     align-items: center;
      
@@ -464,7 +463,6 @@ aside > ul{
 }
 aside > ul > li{
     background:#a593c2;
-    margin-bottom: 2px;
     padding: 8px;
     color: white;
     text-shadow: 2px 2px 15px black;font-size: smaller;
@@ -475,16 +473,14 @@ aside > ul > li{
 #left-menu
 {
     float: left;
-    margin-bottom: 10px;
+    margin-top: 10px;
     position: sticky;
     top: 0px;
     height: auto;
     
 }
 
-.list{
-    list-style-type: none;
-}
+
 
 
 nav > ul > li a, nav > ul > li img{
@@ -493,18 +489,8 @@ nav > ul > li a, nav > ul > li img{
     font-weight: bold;
     padding: 10px;
     text-shadow: 2px 2px 15px black;
+    color:#23CFA7;
 
-}
-
-nav > ul > li{
-    text-align: center;
-    flex: 1;
-    justify-items: stretch;
-    justify-content: center;
-    align-content: space-around;
-    align-items:stretch;
-    flex-wrap: wrap;
-    display: flex;
 }
 
 nav > ul{
@@ -538,20 +524,26 @@ button:hover, tr:hover, th:hover, a:hover
     
     
 }
-    
-a:hover, .logo
+
+button:visited, a:visited{
+    box-shadow: 2px 2px 5px white;
+    color: #551a88;
+}    
+a:hover, .logo:hover
 {
-    background-image: none;
+    background-color: #23CFA7;
     font-size:1.05em;
     font-weight: bold;
-    background: radial-gradient(gold,#997bca, #23CFA7 ); 
+    color: white;
+    transition-duration: .3s;
+    transition-timing-function: steps(20, end); 
 }    
 
 aside > ul > li > a{
     text-decoration: none;
-    color: inherit;
     text-align: center;
     display: flex;
+    color:#23CFA7;
 }
 
 aside > ul > li span{
@@ -559,8 +551,23 @@ aside > ul > li span{
     
 }
 
+.list{
+    list-style-type: none;
+}
 
-button:visited, a:visited{
+nav > ul > li{
+    text-align: center;
+    flex: 1;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
+    display: flex;
     color:#23CFA7;
-    box-shadow: 2px 2px 3px white;
+}
+
+.logo:hover{
+    transition: ease-in-out ;
+    transition-duration: .5s;
 }
